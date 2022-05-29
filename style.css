@@ -30,8 +30,9 @@ section.alternate-background {
   color: #fff;
 }
 
-main img {
-  width: 100px;
+/* Make images fit to screen*/
+img {
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -48,8 +49,13 @@ main img {
 
 .item-double {
   flex: 2;
+  align-self: center;
 }
 
+.form-item {
+  flex: 1;
+  margin: 10px;
+}
 /* -------  Navigation ------- */
 
 header {
@@ -64,11 +70,22 @@ header {
   color: #fff;
 }
 
-header nav ul li {
+/* Make Navigation a flex and centering it*/
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+/*flex with default(rows)*/
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
   list-style-type: none;
 }
 
-header nav ul li a {
+
+header nav ul a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
@@ -104,6 +121,12 @@ form button {
   width: 100%;
 }
 
+/* set form to left label and right input*/
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +140,46 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/*Desktop */
+
+@media all and (min-width: 800px) {
+  
+  /* Change to horizonal orientation for groups and fix their spacing*/
+  .group {
+    flex-direction: row;
+  }
+  
+  section{
+    padding: 0 5%;
+  }
+
+  /*Desktop header changes*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  header nav {
+    margin-top: 7px;
+  }
+
+  .logo {
+    font-size: 58px;
+  }
+
+  /*Making labels go above input in desktop*/
+  .form-item {
+    flex: 1;
+    margin: 10px;
+    flex-direction: column;
+  }
+  
+
+
+
+
+
+
+
+}
