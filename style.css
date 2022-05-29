@@ -142,7 +142,7 @@ footer p {
 /* -------  Media Query ------- */
 /*Desktop */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 480px) {
   
   /* Change to horizonal orientation for groups and fix their spacing*/
   .group {
